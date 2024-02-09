@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="estilo.css">
+  
+  
+  <title>Portada Casino</title>
+</head>
+<body>
+
+    <div class="superior">
+      
+        <div class="logoYsaldo">
+          <img src="imagenLogo.JPG" class="logo" alt="">
+        </div>
+       
+        
+        <div class="etiquetas">
+          
+            <div>
+              
+              <span class="etiqueta-titulo">SALDO:</span>
+              <span id="lblSaldo" class="etiqueta-valor">0</span>
+            
+            
+              <span class="etiqueta-titulo">APUESTA:</span>
+              <span class="etiqueta-valor " id="infoApuesta">0</span>
+            
+            
+              <span class="etiqueta-titulo">GANANCIA:</span>
+              <span class="etiqueta-valor" id="infoGanancia">0</span>
+            </div>
+            <br>
+
+            <div class="botonesJugar">
+              <button class="ingresar" onclick="mostrarModal('modalIngresar')">INGRESAR</button>
+              <button class="retirar" onclick="mostrarModal('modalRetirar')">RETIRAR</button>
+            </div>
+      
+          <!-- Modal de Ingresar Dinero Ficticio -->
+          <div id="modalIngresar" class="modal">
+              <div class="modal-contenido">
+                  <span class="cerrar" onclick="cerrarModal('modalIngresar')">&times;</span>
+                  <p>Saldo que desea ingresar: </p>
+                  <input type="number" id="ingresarCantidad">
+                  <button id="btnaceptarSaldo">Aceptar</button>
+                  <button id="btncancelarSaldo" onclick="cerrarModal('modalIngresar')">Cancelar</button>
+              </div>
+          </div>
+      
+          <!-- Modal de Retirar Dinero Ficticio -->
+          <div id="modalRetirar" class="modal">
+              <div class="modal-contenido">
+                  <span class="cerrar" onclick="cerrarModal('modalRetirar')">&times;</span>
+                  <p>Saldo que desea retirar: </p>
+                  <input type="number" id="retirarCantidad">
+                  <button id="btnaceptarRetirar">Aceptar</button>
+                  <button id="btncancelarRetirar" onclick="cerrarModal('modalRetirar')">Cancelar</button>
+                  
+              </div>
+          </div>
+          
+        </div>
+        
+
+       
+        
+      <div class="imagenRuleta">
+        <img src="gig2.gif" class="ruleta" alt="">
+      </div>
+        
+     
+      
+        <div class="numeros">
+          <div class="laHora" id="laHora">
+
+        </div>
+          <div class="cuadro">
+            
+            <h2>Números Calientes</h2>
+           
+            <div class="seccion">
+              <div class="numero-caliente">7</div>
+              <div class="numero-caliente">12</div>
+              <div class="numero-caliente">21</div>
+              <div class="numero-caliente">32</div>
+            </div>
+          </div>
+          <div class="cuadro">
+            <h2>Números Fríos</h2>
+           
+            <div id="divNumerosMenosFrecuentes" class="seccionMenosFrecuentes">
+              <div class="numero-frio">3</div>
+              <div class="numero-frio">16</div>
+              <div class="numero-frio">27</div>
+              <div class="numero-frio">34</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      
+    </div>
+      
+<hr>
+
+<div class="ruleta-container">
+  
+  <br>
+  <div class="timer-container">
+    <div class="timer-bar" id="timer"></div>
+  </div>
+
+      <table class="ruleta-table" border="0" cellspacing="0" cellpadding="0">  
+      <tr>
+          <td id="cero" rowspan="5" colspan="2" >0</td>
+          <td id="rojo3">3</td>
+          <td id="negro6">6</td>
+          <td id="rojo9">9</td>
+          <td id="negro12">12</td>
+          <td id="rojo15">15</td>
+          <td id="negro18">18</td>
+          <td id="rojo21">21</td>
+          <td id="negro24">24</td>
+          <td id="rojo27">27</td>
+          <td id="negro30">30</td>
+          <td id="rojo33">33</td>
+          <td id="negro36">36</td>
+          <td id="verde1fila">2-1</td>
+      </tr>
+      <tr>
+          
+          <td id="negro2">2</td>
+          <td id="rojo5">5</td>
+          <td id="negro8">8</td>
+          <td id="rojo11">11</td>
+          <td id="negro14">14</td>
+          <td id="rojo17">17</td>
+          <td id="negro20">20</td>
+          <td id="rojo23">23</td>
+          <td id="negro26">26</td>
+          <td id="rojo29">29</td>
+          <td id="negro32">32</td>
+          <td id="rojo35">35</td>
+          <td id="verde2fila">2-1</td>
+          
+      </tr>
+      <tr>
+         
+          <td id="rojo1">1</td>
+          <td id="negro4">4</td>
+          <td id="rojo7">7</td>
+          <td id="negro10">10</td>
+          <td id="rojo13">13</td>
+          <td id="negro16">16</td>
+          <td id="rojo19">19</td>
+          <td id="negro22">22</td>
+          <td id="rojo25">25</td>
+          <td id="negro28">28</td>
+          <td id="rojo31">31</td>
+          <td id="negro34">34</td>
+          <td id="verde3fila">2-1</td>
+          
+          
+      </tr>
+      <tr>
+         
+          <td id="verdeDocena1" colspan="4">1 al 12</td>
+          <td id="verdeDocena2" colspan="4">13 al 24</td>
+          <td id="verdeDocena3" colspan="4">25 al 36</td>
+          <td id="jugar"  rowspan="2"><button id="btnJugarYa">JUGAR YA</button></td>
+         
+         
+          <audio id="sound" src="noVaMas.mp3" type="audio/mp3"></audio>
+          
+          
+          
+          
+      </tr>
+      
+      <tr>
+          
+          <td id="verdeAl18" colspan="2">1-18</td>
+          <td id="verdePar" colspan="2">Par</td>
+          <td id="rojoRombo"  colspan="2">Rojo</td>
+          <td id="negroRombo" colspan="2">Negro</td>
+          <td id="verdeImpar" colspan="2">Impar</td>
+          <td id="verdeAl36" colspan="2">19-36</td>
+          
+      </tr>
+
+      <div class="ultNum">
+        
+        <h3>Últimos Números</h3>
+       
+        <div class="seccion1">
+          <div class="numero-frio">0</div>
+          <div class="numero-frio">7</div>
+          <div class="numero-frio">24</div>
+          <div class="numero-frio">35</div>
+          <div class="numero-frio">14</div>
+          <div class="numero-frio">3</div>
+        </div>
+      </div> 
+  </table>
+  <div id="modalResultado" class="modal">
+    <div class="modal-contenido">
+      
+        <span class="cerrar" onclick="cerrarModal('modalResultado')">&times;</span>
+        <p id="resultadoNumero">Número:</p>
+        <p id="resultadoColor">Color:</p>
+        <p id="resultadoParidad">Paridad:</p>
+    </div>
+</div>
+
+    <div class="contenedor-fichas">
+        <button class="Ficha1" id="ficha1" >
+            <img src="ficha11.jpg" alt="Ficha de Casino">
+        </button>
+        <button class="Ficha5" id="ficha5">
+            <img src="ficha55.jpg" alt="Ficha de Casino">
+        </button>
+        <button class="Ficha10" id="ficha10">
+            <img src="ficha101.jpg" alt="Ficha de Casino">
+        </button>
+        <button class="Ficha20" id="ficha20">
+            <img src="ficha200.jpg" alt="Ficha de Casino">
+        </button>
+        <button class="Ficha50" id="ficha50">
+            <img src="ficha500.jpg" alt="Ficha de Casino">
+        </button>
+        <button class="Ficha100" id="ficha100">
+            <img src="ficha1000,jpg.JPG" alt="Ficha de Casino">
+        </button>
+    </div>
+</div>
+
+
+
+</div>
+<script src="ruleta.js"></script>
+</body>
+</html>

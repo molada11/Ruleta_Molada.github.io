@@ -1,0 +1,850 @@
+/* Estilos para los números calientes y fríos, botón, etc. */
+body {
+    background: linear-gradient(to bottom, #035d21, rgb(244, 239, 240));
+    
+  }
+.superior {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr;
+    flex-direction: row;
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+  }
+  .logo{
+    width: 100px;
+    height: 75px;
+    margin-left: 3%;
+    border: 100px;
+    border-radius: 20%;
+  
+  }
+  .logoYsaldo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    align-self: flex-start;
+    
+  }
+  
+ /*SALDO*/
+ .etiquetas {
+  background-color: #f9f9f9; /* Cambié el color de fondo */
+  border: 2px solid #3498db; /* Grosor y color del borde */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-top: -100px;
+  width: 180px;
+  height: 80px;
+  margin-left: -80px;
+  text-align: center;
+  font-size: 21px;
+  margin-left: 70px;
+  padding: 15px; /* Añadí un espacio interno para que el texto no esté pegado al borde */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregué una sombra para resaltar el contorno */
+}
+
+/* Estilos para cada etiqueta individual */
+.etiqueta {
+  margin-bottom: 10px;
+}
+
+/* Estilos para el título de la etiqueta */
+.etiqueta-titulo {
+  font-weight: bold;
+  color: #333; /* Cambié el color del texto del título */
+}
+
+/* Estilos para el valor de la etiqueta */
+.etiqueta-valor {
+  color: #27ae60; /* Cambié el color del texto del valor */
+}
+
+    /*Estilo para el boton INGRESAR Y RETIRAR*/
+.ingresar {
+    background-color: rgb(8, 8, 8); /* Color de fondo azul similar al de una ruleta europea */
+    color: #fff; /* Color de texto blanco */
+    font-size: 20px;
+    padding: 5px 10px; /* Espaciado del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    margin-left: -200px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+  }
+  
+
+  .retirar {
+    background-color: rgb(8, 8, 8); /* Color de fondo azul similar al de una ruleta europea */
+    color: #fff; /* Color de texto blanco */
+    font-size: 20px;
+    padding: 5px 10px; /* Espaciado del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    margin-right: -200px;
+    
+  }
+  
+/*css imagen ruleta*/
+
+  .ruleta{
+    width: 300px;
+    height: 260px;
+    margin-left: 3%;
+    border: 100px;
+    border-radius: 100%;
+    margin-left: 200px;
+    margin-top: 2px;
+    
+
+  }
+  
+  #laHora {
+    z-index: 1;
+    width: 90px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f6faf6; /* Un color de texto llamativo */
+    background-color: #000; /* Fondo oscuro */
+    padding: 10px; /* Espaciado interior generoso */
+    border: 4px solid #f6f3f2; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px #2f8b2c;; /* Sombra */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 4px; /* Espaciado entre letras amplio */
+    text-align: center; /* Centrar el texto horizontalmente */
+    margin-top: -190px;
+    margin-right: -250px;
+  }
+  
+  
+/* Estilo para el contenedor de números */
+.numeros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:  100px;
+    margin-left: 400px;
+  }
+  
+  /* Estilo para los cuadros */
+  .cuadro {
+    background-color: #0f100f;
+    border: 3px solid #ecf4ef; /* Color de borde azul similar al de una ruleta europea */
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Estilo para cada sección (Números Calientes y Números Fríos) */
+  .seccion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .seccionMenosFrecuentes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /* Estilo para los títulos */
+  h2 {
+    color: #f7f4f4; /* Color de texto azul similar al de una ruleta europea */
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para los números calientes y fríos */
+  .numero-caliente, .numero-frio {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(42, 146, 42); /* Color de fondo naranja */
+    color: #fff; /* Color de texto blanco */
+    border: 3px solid #f6f3f3;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 19px;
+    
+    transform: translateY(-10px);
+  }
+  
+  
+  /*Estilo para el boton JUGAR YA*/
+.jugarYa {
+    background-color: #0e0e0e; /* Color de fondo azul similar al de una ruleta europea */
+    color: #fff; /* Color de texto blanco */
+    font-size: 14px;
+    padding: 5px 10px; /* Espaciado del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    margin-right: 300px;
+  }
+  .rojoBoton{
+    background-color: #f80a0a;
+    color: #fff; /* Color de texto blanco */
+    font-size: px;
+    padding: 5px 10px; /* Espaciado del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    margin-right: 300px;
+  }
+ 
+  /* Estilos CSS estéticos para la ruleta de casino */
+.ruleta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0f100f, #164d19);
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .ruleta-container h1 {
+    font-size: 20px; /* Tamaño de fuente del título reducido */
+  }
+  
+  .ruleta-table {
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #6b4423;
+    border-radius: 10px;
+    border: 10px solid #bda27e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: -220px;
+    margin-top: -320px;
+  }
+  
+  .ruleta-table td {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #6b4423;
+    border: 4px solid #bda27e;
+  }
+  
+  .ruleta-table #cero {
+    background-color: #008000;
+    color: #fff;
+    font-size: 24px;
+   
+  }
+  
+  .ruleta-table #rojo3 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo9 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo15 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo21 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo27 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo33 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo5 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo11 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo17 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo23 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo29 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo35 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo1 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo7 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo13 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo19 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo25 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojo31 {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  .ruleta-table #rojoRombo {
+    background-color: #f80a0a;
+    
+    font-size: 20px;
+   
+  }
+  
+  .ruleta-table #negro2 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro6 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro12 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro18 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro24 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro30 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro36 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro8 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro14 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro20 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro26 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro32 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro4 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro10 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro16 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro22 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro28 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negro34 {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #negroRombo {
+    background-color: #000;
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  
+  .ruleta-table #verdeDocena1 {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verdeDocena2 {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verdeDocena3 {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verdeAl18 {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verdePar {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verdeImpar {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verdeAl36 {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verde3fila {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verde1fila {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #verde2fila {
+    background-color: #008000;
+  
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  .ruleta-table #jugar {
+    background-color: rgb(64, 103, 132);
+    font-size: 20px;
+   
+    color: #fff;
+  }
+  
+  .ruleta-table button {
+    background-color: rgb(63, 83, 98);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+
+  
+  .contenedor-fichas {
+    text-align: center;
+  }
+
+  /*Estilo para la barra de tiempo*/
+  .timer-container {
+    width: 300px;
+    height: 20px;
+    background-color: #f4f4f4;
+    border: 2px solid #333;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .timer-bar {
+    height: 100%;
+    background-color: #55ba59;
+    width: 100%;
+    position: absolute;
+    border-radius: 8px 0 0 8px;
+    transition: width 10s linear;
+  }
+
+  .contenedor-fichas {
+    margin-top: 18px;
+  }
+  
+  /* Estilo para el botón con la clase "Ficha1" */
+  .Ficha1 {
+    padding: auto;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  /* Estilo para la imagen dentro del botón */
+  .Ficha1 img {
+    width: 49px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de aspecto */
+    border-radius: 100px;
+    
+  }
+  .Ficha5 {
+    padding: auto;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  /* Estilo para la imagen dentro del botón */
+  .Ficha5 img {
+    width: 48px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de aspecto */
+    border-radius: 100px;
+  }
+  .Ficha10 {
+    padding: auto;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  /* Estilo para la imagen dentro del botón */
+  .Ficha10 img {
+    width: 49px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de aspecto */
+    border-radius: 100px;
+  }
+  .Ficha20 {
+    padding: auto;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  /* Estilo para la imagen dentro del botón */
+  .Ficha20 img {
+    width: 46px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de aspecto */
+    border-radius: 100px;
+  }
+  
+  .Ficha50 {
+    padding: auto;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  /* Estilo para la imagen dentro del botón */
+  .Ficha50 img {
+    width: 45px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de aspecto */
+    border-radius: 100px;
+  }
+  
+  .Ficha100 {
+    padding: auto;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  /* Estilo para la imagen dentro del botón */
+  .Ficha100 img {
+    width: 47px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de aspecto */
+    border-radius: 100px;
+  }  
+
+  
+ /*Estilo para los últimos numeros*/
+ 
+
+
+/* Estilo para los cuadros */
+.ultNum {
+  background-color: #78e278;
+  border: 3px solid #ecf4ef; /* Color de borde azul similar al de una ruleta europea */
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+  margin-right: -1230px;
+  margin-top: -20px;
+}
+
+/* Estilo para cada sección (Números Calientes y Números Fríos) */
+.seccion1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Estilo para los títulos */
+h3 {
+  color: #0a0a0a; /* Color de texto azul similar al de una ruleta europea */
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los números calientes y fríos */
+.numero-caliente, .numero-frio {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(42, 146, 42); /* Color de fondo naranja */
+  color: #fff; /* Color de texto blanco */
+  border: 3px solid #f6f3f3;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 19px;
+  
+  transform: translateY(-10px);
+}
+
+/* Estilos para los modales */
+/* Estilos para el fondo del modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Estilos para el contenido del modal */
+.modal-contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #3498db; /* Cambié el grosor del borde y el color */
+  border-radius: 10px; /* Añadí bordes redondeados */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 80%;
+  text-align: center;
+}
+
+/* Estilos para el botón de cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px; /* Ajusté el tamaño del texto */
+  color: #333; /* Color del texto */
+}
+
+/* Estilos para los inputs dentro del modal */
+.modal-contenido input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estilos para los botones dentro del modal */
+.modal-contenido button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambios en el estilo al pasar el ratón para los botones */
+.modal-contenido button:hover {
+  background-color: #2980b9; /* Cambié el color al pasar el ratón */
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #3498db; /* Color del texto, puedes ajustarlo según tu preferencia */
+  transition: color 0.3s ease; /* Agregué una transición para suavizar el cambio de color al pasar el ratón */
+}
+
+/* Cambios en el estilo al pasar el ratón para el botón de cerrar */
+.cerrar:hover {
+  color: #2980b9; /* Cambié el color al pasar el ratón */
+}
+
+/* Estilos específicos para los botones de aceptar y cancelar */
+button#btnaceptarSaldo,
+button#btncancelarSaldo,
+button#btnaceptarRetirar,
+button#btncancelarRetirar {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambios en el estilo al pasar el ratón */
+button#btnaceptarSaldo:hover,
+button#btncancelarSaldo:hover,
+button#btnaceptarRetirar:hover,
+button#btncancelarRetirar:hover {
+  background-color: #27ae60;
+}
+
+/* Estilo específico para los elementos p dentro de las ventanas modales */
+.modal-contenido p {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333; /* Puedes ajustar el color del texto según tu preferencia */
+}
+
+/*Estilo para colocar la ficha en el tablero*/
+
+ 
